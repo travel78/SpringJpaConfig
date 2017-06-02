@@ -14,6 +14,10 @@
         <property name="persistenceUnitName" value="xxx"></property>
     </bean>
 
+    <bean class="dao.UserDao" id="userDao" >
+        <property name="factory" ref="entityManagerFactory"/>
+    </bean>
+
     <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
         <property name="entityManagerFactory" ref="entityManagerFactory"></property>
     </bean>
